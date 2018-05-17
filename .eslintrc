@@ -1,0 +1,40 @@
+{
+    "parser": "babel-eslint",
+    "globals": {
+        "window": true,
+        "document": true,
+        "localStorage": true
+    },
+    "rules": {
+        "object-shorthand": 0,
+        "no-debugger": 0,
+        "no-console": 0,
+        "no-undef": 0,
+        "no-unused-vars": 0,
+        "no-underscore-dangle": 0,
+        "no-param-reassign": [2, { "props": false }],
+        "indent": [2, 4, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
+        "max-len": [1, 120, 2, { "ignoreComments" : true }],
+        "jsx-quotes": ["error", "prefer-double"],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "class-methods-use-this": [
+            "error", 
+            {
+                "exceptMethods": [
+                    "render",
+                    "getInitialState",
+                    "getDefaultProps",
+                    "getChildContext",
+                    "componentWillMount",
+                    "componentDidMount",
+                    "componentWillReceiveProps",
+                    "shouldComponentUpdate",
+                    "componentWillUpdate",
+                    "componentDidUpdate",
+                    "componentWillUnmount"
+                ]
+            }
+        ]
+    },
+    "extends": ["airbnb-base"]
+}

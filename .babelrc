@@ -1,0 +1,18 @@
+{
+    "ignore": [
+        "node_modules/**/*"
+    ],
+    "env": {
+        "test": {
+            "presets": ["env", "stage-2", "react"]
+        },
+        "production": {
+            "presets": [["env", { "modules": false }], "stage-2", "react"],
+            "plugins": [ "transform-runtime", "dynamic-import-webpack"]
+        },
+        "development": {
+            "presets": [["env", { "modules": false }], "stage-2", "react"],
+            "plugins": [ "transform-runtime", "dynamic-import-webpack"]
+        }
+    }
+}
